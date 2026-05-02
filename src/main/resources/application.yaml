@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: ClearTrack
+  datasource:
+    url: jdbc:mysql://localhost:3306/cleantrack
+    username: root
+    password: ${password}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+aws:
+  accessKey: ${accessKeys}
+  secretKey: ${secretKeys}
+  region: ap-south-1
+  bucketName: cleantrack-image
+
+server:
+  port: 1010
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
